@@ -95,9 +95,6 @@ export default class Header extends Component {
                             <h4>Мы в соцсетях</h4>
                         </dt>
                         <dd className="footer-section-contacts-dd img-links">
-                            <a href="">
-                                <img src={Facebook} alt="Заказ тортов и пряников. Страница Facebook"/>
-                            </a>
                             <a href="https://www.instagram.com/sasha__gomeniuk/">
                                 <img src={Insta} alt="links" alt="Заказ тортов и пряников. Страница Instagram"/>
                             </a>

@@ -15,10 +15,11 @@ import bg43 from '../image/431.jpg';
 import bg51 from '../image/511.jpg';
 import bg52 from '../image/521.jpg';
 import bg53 from '../image/531.jpg';
+import  Pictures  from './Pictures';
 
 export default class Cake extends Component {
-   constructor() {
-    super();
+   constructor(props) {
+    super(props);
     this.state={
       bg1: 'url('+bg11+') center/cover no-repeat',
       bg2: 'url('+bg12+') center/cover no-repeat',
@@ -28,9 +29,6 @@ export default class Cake extends Component {
       bgbtnprev: 'linear-gradient(to top, #f3f3f3 0%, #ffffff 100%)',
       colorbtnprev:'#7e7e7e',
       checkbtn: [1,0,0,0,0],
-      activefirst: false,
-      activesecond:false,
-      activethird: false,
     }
    }
    toggleFirstClass(e) {
@@ -152,35 +150,7 @@ export default class Cake extends Component {
       <h3 className="main-general-section-h3">
         Делаем различные свадебные, детские, праздничные торты. Цена от 270 грн/кг
       </h3>
-      <ul className="main-general-section-ul section_ul_1">
-        <li className="main-general-section-ul-li-item1">
-          <div 
-          className={this.state.activefirst ? 'main-general-section-ul-li-item1 img1 big': 'main-general-section-ul-li-item1 img1'} 
-          onClick={e=>this.toggleFirstClass()} 
-          style={style1}></div>
-          <ul className="main-general-section-ul-li-item1-hide-button">
-            <li>Виды тортов</li>
-          </ul>
-        </li>
-        <li className="main-general-section-ul-li-item2">
-          <div 
-          className={this.state.activesecond ? 'main-general-section-ul-li-item2 img2 big': 'main-general-section-ul-li-item2 img2'} 
-          onClick={e=>this.toggleSecondClass()} 
-          style={style2}></div>
-          <ul className="main-general-section-ul-li-item1-hide-button">
-            <li>Виды тортов</li>
-          </ul>
-        </li>
-        <li className="main-general-section-ul-li-item3">
-          <div
-          className={this.state.activethird ? 'main-general-section-ul-li-item3 img3 big': 'main-general-section-ul-li-item3 img3'} 
-          onClick={e=>this.toggleThirdClass()} 
-          style={style3}></div>
-          <ul className="main-general-section-ul-li-item1-hide-button">
-            <li>Виды тортов</li>
-          </ul>
-        </li>
-      </ul>
+      <Pictures style1={style1} style2={style2} style3={style3} />
         <div className="main-general-section-services-form2">
           <button className="main-general-section-services-form2-btn1"  onClick={e=>this.prev()}> {'<'} </button>
           <button className="main-general-section-services-form2-btn2" style={(btn1 ? stylebtn2: stylebtn1)} onClick={e=>this.btn1func()}>1</button>
